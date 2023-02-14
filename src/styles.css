@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--blue: #36465d;
+	--dark-blue: #222f41;
+	--grey: #dddedc;
+}
+
+body {
+	background-color: var(--blue);
+	color: var(--grey);
+}
+
+.hide {
+	display: none;
+}
+
+#final-code-textarea {
+	resize: none;
+}

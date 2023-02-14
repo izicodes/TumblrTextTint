@@ -5,26 +5,33 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="src/styles.css" />
 		<title>TumblrTextTint</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<div class="content">
 				<header>
-					<img src="images/logo.png" alt="application logo" />
+					<img src="images/logo.png" alt="application logo" id="logo" />
 				</header>
 				<main>
+					<!-- The user input -->
 					<input type="text" name="user-input" id="user-input" placeholder="enter text here" />
+
+					<!-- The radio button choices -->
 					<section id="radio-buttons">
 						<input type="radio" name="choice" id="colour-picker-choice" /><label for="colour-picker-choice">Colour-picker?</label> <input type="radio" name="choice" id="hex-code-choice" /><label for="hex-code-choice">Hex code?</label>
 					</section>
-					<section>
+					<section class="hide">
 						<input type="color" name="colour-picker" id="colour-picker" />
 					</section>
-					<section>
+					<section class="hide">
 						<input type="text" name="" id="hex-code" placeholder="enter hex code" />
 					</section>
 					<button>Tint my text!</button>
+					<section>
+						<textarea name="final-code-textarea" id="final-code-textarea" cols="30" rows="10"></textarea>
+					</section>
 				</main>
 			</div>
 		</div>
