@@ -28,8 +28,8 @@
 					<section class="hide">
 						<input type="color" name="colour-picker" id="colour-picker" />
 					</section>
-					<section class="hide">
-						<input type="text" name="" id="hex-code" placeholder="enter hex code" value="#" />
+					<section class="">
+						<input type="text" name="" id="hex-code" placeholder="enter hex code" value="#" onkeydown="return preventDeleteFirstChar(event, this);" />
 					</section>
 
 					<!-- The button -->
@@ -46,5 +46,6 @@
 				</main>
 			</div>
 		</div>
+		<script src="src/script.js"></script>
 	</body>
 </html>
