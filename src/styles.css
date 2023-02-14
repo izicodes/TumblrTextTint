@@ -30,7 +30,7 @@ body {
 /* HEADER */
 #logo {
 	width: 650px;
-	margin-bottom: 25px;
+	margin-bottom: 45px;
 }
 
 /* HIDING ELEMENTS */
@@ -57,6 +57,7 @@ main,
 	outline: none;
 	font-family: "Mulish", sans-serif;
 	padding: 9px 15px;
+	color: #4c4b4b;
 	text-align: justify;
 	box-shadow: -4px 4px var(--dark-blue);
 }
@@ -81,7 +82,7 @@ input[type="radio"] {
 
 /* GENERATED CODE SECTION */
 .bottom-section {
-	margin-top: 20px;
+	margin-top: 30px;
 }
 #final-code-textarea {
 	resize: none;
