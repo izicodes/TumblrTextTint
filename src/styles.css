@@ -64,6 +64,17 @@ main,
 #user-input {
 	width: 400px;
 }
+#hex-code {
+	width: 250px;
+	text-align: center;
+}
+
+#user-input::placeholder,
+#final-code-textarea::placeholder,
+#hex-code::placeholder {
+	font-size: 0.9rem;
+	color: #b7b7b7;
+}
 
 /* RADIO BUTTONS */
 #radio-buttons {
