@@ -11,8 +11,26 @@
 body {
 	background-color: var(--blue);
 	color: var(--grey);
+	margin: 0;
 }
 
+/* WRAPPERS */
+.wrapper {
+	margin-top: 70px;
+}
+.content {
+	/* background-color: red; */
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+}
+
+/* IMAGE */
+#logo {
+	width: 650px;
+}
+
+/* HIDING ELEMENTS */
 .hide {
 	display: none;
 }
