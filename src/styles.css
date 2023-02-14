@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 * {
 	box-sizing: border-box;
 }
@@ -13,6 +14,7 @@ body {
 	color: var(--grey);
 	margin: 0;
 	font-size: 16px;
+	font-family: "Mulish", sans-serif;
 }
 
 /* WRAPPERS */
@@ -32,7 +34,7 @@ body {
 
 /* HIDING ELEMENTS */
 .hide {
-	display: none;
+	/* display: none; */
 }
 
 /* MAIN */
@@ -40,21 +42,38 @@ main {
 	display: flex;
 	flex-direction: column;
 	place-items: center;
+	gap: 20px;
 }
 
 /* USER INPUT */
 #user-input,
-#final-code-textarea {
+#final-code-textarea,
+#hex-code {
 	border-radius: 10px;
 	border: none;
 	outline: none;
-	padding: 5px 10px;
+	font-family: "Mulish", sans-serif;
+	padding: 9px 15px;
 	text-align: justify;
 	box-shadow: -3px 3px var(--dark-blue);
 }
-
 #user-input {
 	width: 400px;
+}
+
+/* RADIO BUTTONS */
+#radio-buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 35px;
+}
+.align-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+input[type="radio"] {
+	margin: 2px 2px;
 }
 
 /* GENERATED CODE SECTION */
@@ -63,4 +82,38 @@ main {
 }
 .button-group {
 	text-align: center;
+}
+
+/* BUTTONS */
+button {
+	border: none;
+	background-color: var(--dark-blue);
+	border: 2px solid var(--dark-blue);
+	color: var(--grey);
+	padding: 10px 10px;
+	border-radius: 10px;
+	transition: 300ms;
+	font-family: "Mulish", sans-serif;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+}
+
+main > button:hover {
+	background-color: var(--grey);
+	color: var(--dark-blue);
+}
+.button-group > button:nth-child(1):hover {
+	background-color: #db5c84;
+	color: var(--dark-blue);
+}
+.button-group > button:nth-child(2):hover {
+	background-color: #f9c37a;
+	color: var(--dark-blue);
+}
+
+main > button:hover,
+.button-group > button:nth-child(1):hover,
+.button-group > button:nth-child(2):hover {
+	box-shadow: -3px 3px var(--dark-blue);
+	border: 2px solid white;
 }
