@@ -22,15 +22,23 @@
 					<section id="radio-buttons">
 						<input type="radio" name="choice" id="colour-picker-choice" /><label for="colour-picker-choice">Colour-picker?</label> <input type="radio" name="choice" id="hex-code-choice" /><label for="hex-code-choice">Hex code?</label>
 					</section>
+
+					<!-- The actual choices to pop-up -->
 					<section class="hide">
 						<input type="color" name="colour-picker" id="colour-picker" />
 					</section>
 					<section class="hide">
 						<input type="text" name="" id="hex-code" placeholder="enter hex code" />
 					</section>
+
+					<!-- The button -->
 					<button>Tint my text!</button>
+
+					<!-- The textarea that the code will appear + buttons -->
 					<section>
 						<textarea name="final-code-textarea" id="final-code-textarea" cols="30" rows="10"></textarea>
+						<button>Copy</button>
+						<button>Reset</button>
 					</section>
 				</main>
 			</div>
