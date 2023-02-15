@@ -56,9 +56,17 @@ generateBtn.addEventListener("click", function () {
 	var colorValue = colourPickerInput.value;
 	var hexValue = hexCodeInput.value;
 
-	if (userInput.value == "" || (colourSection.classList.contains("hide") && hexSection.classList.contains("hide")) || hexCodeInput.value == "") {
+	if (userInput.value == "") {
+		errorMsg.textContent = "Oh no! Empty first box!";
+		errorMsg.classList.remove("hide");
+	} else if (colourSection.classList.contains("hide") && hexSection.classList.contains("hide")) {
+		errorMsg.textContent = "Oh no! You didn't choose a colour!";
+		errorMsg.classList.remove("hide");
+	} else if (hexCodeInput.value == "") {
+		errorMsg.textContent = "Oh no! HEX code box is empty!";
 		errorMsg.classList.remove("hide");
 	} else {
+		errorMsg.classList.add("hide");
 		// Getting value from colour picker
 		if (!colourSection.classList.contains("hide") && userInput.value !== null && hexSection.classList.contains("hide")) {
 			textarea.value = generateCode(text, colorValue);
