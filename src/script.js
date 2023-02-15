@@ -50,23 +50,20 @@ function preventDeleteFirstChar(event, input) {
 	return true;
 }
 
-// When the
+// When the user clicks the button
 generateBtn.addEventListener("click", function () {
 	var text = userInput.value;
 	var colorValue = colourPickerInput.value;
 	var hexValue = hexCodeInput.value;
 
 	if (userInput.value == "") {
-		errorMsg.textContent = "Oh no! Empty first box!";
-		errorMsg.classList.remove("hide");
+		createErrorMessage("Oh no! Empty first box!");
 	} else if (colourSection.classList.contains("hide") && hexSection.classList.contains("hide")) {
 		// User didn't pick any colour choices
-		errorMsg.textContent = "Oh no! You didn't choose a colour!";
-		errorMsg.classList.remove("hide");
+		createErrorMessage("Oh no! You didn't choose a colour!");
 	} else if (hexCodeInput.value == "" && colourSection.classList.contains("hide")) {
 		// Empty HEX code box
-		errorMsg.textContent = "Oh no! HEX code box is empty!";
-		errorMsg.classList.remove("hide");
+		createErrorMessage("Oh no! HEX code box is empty!");
 	} else {
 		errorMsg.classList.add("hide");
 		// Getting value from colour picker
@@ -75,8 +72,13 @@ generateBtn.addEventListener("click", function () {
 		}
 
 		// Getting the user inputted hex code
-		if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
+		if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide") && /^[a-zA-Z0-9#]+$/.test(hexValue)) {
 			textarea.value = generateCode(text, hexValue);
+		} else {
+			// If the HEX Code contains symbols other than letters, numbers, and #
+			createErrorMessage("Only # is allowed!");
+			textarea.value = "";
+			return;
 		}
 	}
 });
@@ -86,6 +88,9 @@ function generateCode(text, colour) {
 	if (colour.charAt(0) !== "#") {
 		colour = "#" + colour;
 	}
-	var finalCode = '<span style="color: ' + colour + ';">' + text + "</span>";
-	return finalCode;
+}
+
+function createErrorMessage(message) {
+	errorMsg.textContent = message;
+	errorMsg.classList.remove("hide");
 }
