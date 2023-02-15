@@ -58,7 +58,7 @@ generateBtn.addEventListener("click", function () {
 			textarea.value = generateCode(text, colorValue);
 		}
 		if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
-			checkInput(text, hexValue);
+			checkHEXCode(text, hexValue);
 		}
 	}
 });
@@ -76,7 +76,7 @@ function createErrorMessage(message) {
 	errorMsg.textContent = message;
 	errorMsg.classList.remove("hide");
 }
-function checkInput(text, colour) {
+function checkHEXCode(text, colour) {
 	// Checks if the HEX code has only letters, numbers and the '#' symbol
 	if (/^[a-zA-Z0-9#]+$/.test(colour)) {
 		// Checks if the HEX code has the '#' symbol
@@ -96,7 +96,7 @@ function checkInput(text, colour) {
 				textarea.value = generateCode(text, colour);
 				return;
 			} else {
-				createErrorMessage("Format the HEX code correctly!");
+				createErrorMessage("Format the HEX code correctly please!");
 				textarea.value = "";
 				return;
 			}
