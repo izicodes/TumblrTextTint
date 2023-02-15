@@ -5,6 +5,7 @@ var colourChoice = document.querySelector("#colour-picker-choice");
 var colourSection = document.querySelector("#colour-picker-section");
 var generateBtn = document.querySelector("#generate-btn");
 var errorMsg = document.querySelector("#error-message");
+var colourPickerInput = document.querySelector("#colour-picker");
 
 // Add the disabled styling to the first button + disabling the button entirely
 generateBtn.setAttribute("class", "disabled-btn");
@@ -24,6 +25,15 @@ colourChoice.addEventListener("click", function () {
 	}
 	colourSection.classList.remove("hide");
 });
+
+// Getting the value from the colour picker
+function rgbToHex(rgb) {
+	const [r, g, b] = rgb.match(/\d+/g);
+	return `#${Number(r).toString(16)}${Number(g).toString(16)}${Number(b).toString(16)}`;
+}
+
+var colorValue = colourPickerInput.value;
+var hexValue = rgbToHex(colorValue);
 
 // User can not delete the first character of the HEX code input
 function preventDeleteFirstChar(event, input) {
