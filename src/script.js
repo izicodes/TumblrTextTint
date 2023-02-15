@@ -18,6 +18,9 @@ var textarea = document.querySelector("#final-code-textarea");
 hexChoice.addEventListener("click", function () {
 	if (!colourSection.classList.contains("hide")) {
 		colourSection.classList.add("hide");
+		if (textarea.value !== null) {
+			textarea.value = "";
+		}
 	}
 	hexSection.classList.remove("hide");
 });
@@ -25,30 +28,14 @@ hexChoice.addEventListener("click", function () {
 colourChoice.addEventListener("click", function () {
 	if (!hexSection.classList.contains("hide")) {
 		hexSection.classList.add("hide");
+		if (textarea.value !== null) {
+			textarea.value = "";
+		}
 	}
 	colourSection.classList.remove("hide");
 });
 
-// Getting the value from the colour picker
-function rgbToHex(rgb) {
-	const [r, g, b] = rgb.match(/\d+/g);
-	return `#${Number(r).toString(16)}${Number(g).toString(16)}${Number(b).toString(16)}`;
-}
-
 var colorValue = colourPickerInput.value;
-
-// User can not delete the first character of the HEX code input
-function preventDeleteFirstChar(event, input) {
-	const key = event.key;
-	if (key === "Backspace" || key === "Delete") {
-		// User is trying to delete with backspace or delete key
-		if (input.selectionStart === 1 && input.selectionEnd === 1) {
-			// User is trying to delete the first character
-			return false;
-		}
-	}
-	return true;
-}
 
 // When the user clicks the button
 generateBtn.addEventListener("click", function () {
@@ -70,27 +57,53 @@ generateBtn.addEventListener("click", function () {
 		if (!colourSection.classList.contains("hide") && userInput.value !== null && hexSection.classList.contains("hide")) {
 			textarea.value = generateCode(text, colorValue);
 		}
-
-		// Getting the user inputted hex code
-		if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide") && /^[a-zA-Z0-9#]+$/.test(hexValue)) {
-			textarea.value = generateCode(text, hexValue);
-		} else {
-			// If the HEX Code contains symbols other than letters, numbers, and #
-			createErrorMessage("Only # is allowed!");
-			textarea.value = "";
-			return;
+		if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
+			checkInput(text, hexValue);
 		}
 	}
 });
 
+// FUNCTIONS
 // Generate the code for the textarea
 function generateCode(text, colour) {
 	if (colour.charAt(0) !== "#") {
 		colour = "#" + colour;
 	}
+	var finalCode = '<span style="color: ' + colour + ';">' + text + "</span>";
+	return finalCode;
 }
-
 function createErrorMessage(message) {
 	errorMsg.textContent = message;
 	errorMsg.classList.remove("hide");
+}
+function checkInput(text, colour) {
+	// Checks if the HEX code has only letters, numbers and the '#' symbol
+	if (/^[a-zA-Z0-9#]+$/.test(colour)) {
+		// Checks if the HEX code has the '#' symbol
+		if (colour.includes("#")) {
+			// Checks if the '#' symbol is in the front
+			if (colour.charAt(0) == "#") {
+				textarea.value = generateCode(text, colour);
+			} else {
+				createErrorMessage("'#' has to be in the front");
+				textarea.value = "";
+				return;
+			}
+		} else {
+			// Checks if the HEX code without the '#' symbol is 6 chars long
+			if (colour.trim().length === 6) {
+				colour = "#" + colour;
+				textarea.value = generateCode(text, colour);
+				return;
+			} else {
+				createErrorMessage("Format the HEX code correctly!");
+				textarea.value = "";
+				return;
+			}
+		}
+	} else {
+		createErrorMessage("Only # is allowed!");
+		textarea.value = "";
+		return;
+	}
 }
