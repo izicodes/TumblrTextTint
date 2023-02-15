@@ -6,6 +6,7 @@
 :root {
 	--blue: #36465d;
 	--dark-blue: #283344;
+	--disabled-blue: #7f8a9b;
 	--grey: #dddedc;
 }
 
@@ -119,8 +120,20 @@ button {
 	letter-spacing: 1.5px;
 }
 
+.disabled-btn {
+	background-color: var(--disabled-blue);
+	border: 2px solid var(--disabled-blue);
+}
+.disabled-btn:hover {
+	box-shadow: none;
+	color: var(--grey);
+	background-color: var(--disabled-blue);
+	border: 2px solid var(--disabled-blue);
+	cursor: not-allowed;
+}
+
 main > button:hover {
-	background-color: var(--grey);
+	background-color: #5ac077;
 	color: var(--dark-blue);
 }
 .button-group > button:nth-child(1):hover {
