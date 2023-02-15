@@ -41,11 +41,12 @@ body {
 
 /* MAIN */
 main,
-.bottom-section {
+.bottom-section,
+.first-btn-section {
 	display: flex;
 	flex-direction: column;
 	place-items: center;
-	gap: 20px;
+	gap: 25px;
 }
 
 /* USER INPUT */
@@ -91,6 +92,20 @@ main,
 input[type="radio"] {
 	margin: 2px 10px 0 0px;
 }
+#colour-picker-choice,
+#hex-code-choice {
+	padding: 7px 2px;
+}
+
+.first-btn-section {
+	gap: 10px !important;
+}
+
+#error-message {
+	margin: 0;
+	color: #ffc8c8;
+	font-size: 0.8rem;
+}
 
 /* GENERATED CODE SECTION */
 .bottom-section {
@@ -118,6 +133,9 @@ button {
 	font-family: "Mulish", sans-serif;
 	font-weight: bold;
 	letter-spacing: 1.5px;
+}
+#generate-btn {
+	margin-top: 10px;
 }
 
 .disabled-btn {

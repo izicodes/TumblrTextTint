@@ -33,11 +33,14 @@
 					</section>
 
 					<!-- The button -->
-					<button type="button" id="generate-btn">Tint my text!</button>
+					<div class="first-btn-section">
+						<button type="button" id="generate-btn" class="disabled-btn">Tint my text!</button>
+						<p id="error-message" class="hide">The first textbox is empty</p>
+					</div>
 
 					<!-- The textarea that the code will appear + buttons -->
 					<section class="bottom-section">
-						<textarea name="final-code-textarea" id="final-code-textarea" cols="60" rows="3" placeholder="Your code will be generated here..."></textarea>
+						<textarea name="final-code-textarea" id="final-code-textarea" cols="40" rows="3" placeholder="Your code will be generated here..."></textarea>
 						<div class="button-group">
 							<button>Copy</button>
 							<button>Reset</button>

@@ -4,6 +4,7 @@ var hexSection = document.querySelector("#hex-code-section");
 var colourChoice = document.querySelector("#colour-picker-choice");
 var colourSection = document.querySelector("#colour-picker-section");
 var generateBtn = document.querySelector("#generate-btn");
+var errorMsg = document.querySelector("#error-message");
 
 // Add the disabled styling to the first button + disabling the button entirely
 generateBtn.setAttribute("class", "disabled-btn");
