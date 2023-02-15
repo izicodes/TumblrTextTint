@@ -96,11 +96,36 @@ input[type="radio"] {
 #hex-code-choice {
 	padding: 7px 2px;
 }
+#colour-picker {
+	border: none;
+	padding: 0;
+}
+
+#colour-picker {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	width: 60px;
+	height: 60px;
+	border: none;
+	cursor: pointer;
+}
+
+#colour-picker::-webkit-color-swatch {
+	border-radius: 13px;
+	border: 3px solid white;
+	box-shadow: -4px 4px var(--dark-blue);
+}
+#colour-picker::-moz-color-swatch {
+	border-radius: 13px;
+	border: 3px solid white;
+	box-shadow: -4px 4px var(--dark-blue);
+}
 
 .first-btn-section {
 	gap: 10px !important;
 }
-
 #error-message {
 	margin: 0;
 	color: #ffc8c8;
