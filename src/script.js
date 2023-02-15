@@ -50,19 +50,24 @@ function preventDeleteFirstChar(event, input) {
 	return true;
 }
 
+// When the
 generateBtn.addEventListener("click", function () {
 	var text = userInput.value;
 	var colorValue = colourPickerInput.value;
 	var hexValue = hexCodeInput.value;
 
-	// Getting value from colour picker
-	if (!colourSection.classList.contains("hide") && userInput.value !== null && hexSection.classList.contains("hide")) {
-		textarea.value = generateCode(text, colorValue);
-	}
+	if (userInput.value == "" || (colourSection.classList.contains("hide") && hexSection.classList.contains("hide")) || hexCodeInput.value == "") {
+		errorMsg.classList.remove("hide");
+	} else {
+		// Getting value from colour picker
+		if (!colourSection.classList.contains("hide") && userInput.value !== null && hexSection.classList.contains("hide")) {
+			textarea.value = generateCode(text, colorValue);
+		}
 
-	// Getting the user inputted hex code
-	if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
-		textarea.value = generateCode(text, hexValue);
+		// Getting the user inputted hex code
+		if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
+			textarea.value = generateCode(text, hexValue);
+		}
 	}
 });
 
