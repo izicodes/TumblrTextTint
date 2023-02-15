@@ -6,10 +6,12 @@ var colourSection = document.querySelector("#colour-picker-section");
 var generateBtn = document.querySelector("#generate-btn");
 var errorMsg = document.querySelector("#error-message");
 var colourPickerInput = document.querySelector("#colour-picker");
+var hexCodeInput = document.querySelector("#hex-code");
+var userInput = document.querySelector("#user-input");
 
 // Add the disabled styling to the first button + disabling the button entirely
-generateBtn.setAttribute("class", "disabled-btn");
-generateBtn.disabled = true;
+// generateBtn.setAttribute("class", "disabled-btn");
+// generateBtn.disabled = true;
 
 // If HEX Code choice is selected
 hexChoice.addEventListener("click", function () {
@@ -33,7 +35,6 @@ function rgbToHex(rgb) {
 }
 
 var colorValue = colourPickerInput.value;
-var hexValue = rgbToHex(colorValue);
 
 // User can not delete the first character of the HEX code input
 function preventDeleteFirstChar(event, input) {
@@ -46,4 +47,29 @@ function preventDeleteFirstChar(event, input) {
 		}
 	}
 	return true;
+}
+
+generateBtn.addEventListener("click", function () {
+	var text = userInput.value;
+	var colorValue = colourPickerInput.value;
+	var hexValue = hexCodeInput.value;
+
+	// Getting value from colour picker
+	if (!colourSection.classList.contains("hide") && userInput.value !== null && hexSection.classList.contains("hide")) {
+		alert(text);
+		alert(colorValue);
+		generateCode(text, colorValue);
+	}
+
+	// Getting the user inputted hex code
+	if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
+		alert(text);
+		alert(hexValue);
+	}
+});
+
+// Generate the code for the textarea
+function generateCode(text, colour) {
+	var finalCode = '<span style="color: ' + colour + ';">' + text + "</span>";
+	alert(finalCode);
 }

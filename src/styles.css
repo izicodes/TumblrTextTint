@@ -157,6 +157,7 @@ button {
 	transition: 300ms;
 	font-family: "Mulish", sans-serif;
 	font-weight: bold;
+	cursor: pointer;
 	letter-spacing: 1.5px;
 }
 #generate-btn {
@@ -175,7 +176,7 @@ button {
 	cursor: not-allowed;
 }
 
-main > button:hover {
+#generate-btn:hover {
 	background-color: #5ac077;
 	color: var(--dark-blue);
 }
@@ -188,7 +189,7 @@ main > button:hover {
 	color: var(--dark-blue);
 }
 
-main > button:hover,
+#generate-btn:hover,
 .button-group > button:nth-child(1):hover,
 .button-group > button:nth-child(2):hover {
 	box-shadow: -4px 4px var(--dark-blue);
