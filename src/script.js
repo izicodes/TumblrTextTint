@@ -8,6 +8,7 @@ var errorMsg = document.querySelector("#error-message");
 var colourPickerInput = document.querySelector("#colour-picker");
 var hexCodeInput = document.querySelector("#hex-code");
 var userInput = document.querySelector("#user-input");
+var textarea = document.querySelector("#final-code-textarea");
 
 // Add the disabled styling to the first button + disabling the button entirely
 // generateBtn.setAttribute("class", "disabled-btn");
@@ -56,20 +57,17 @@ generateBtn.addEventListener("click", function () {
 
 	// Getting value from colour picker
 	if (!colourSection.classList.contains("hide") && userInput.value !== null && hexSection.classList.contains("hide")) {
-		alert(text);
-		alert(colorValue);
-		generateCode(text, colorValue);
+		textarea.value = generateCode(text, colorValue);
 	}
 
 	// Getting the user inputted hex code
 	if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
-		alert(text);
-		alert(hexValue);
+		textarea.value = generateCode(text, hexValue);
 	}
 });
 
 // Generate the code for the textarea
 function generateCode(text, colour) {
 	var finalCode = '<span style="color: ' + colour + ';">' + text + "</span>";
-	alert(finalCode);
+	return finalCode;
 }
