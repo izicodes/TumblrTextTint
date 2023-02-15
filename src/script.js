@@ -60,9 +60,11 @@ generateBtn.addEventListener("click", function () {
 		errorMsg.textContent = "Oh no! Empty first box!";
 		errorMsg.classList.remove("hide");
 	} else if (colourSection.classList.contains("hide") && hexSection.classList.contains("hide")) {
+		// User didn't pick any colour choices
 		errorMsg.textContent = "Oh no! You didn't choose a colour!";
 		errorMsg.classList.remove("hide");
-	} else if (hexCodeInput.value == "") {
+	} else if (hexCodeInput.value == "" && colourSection.classList.contains("hide")) {
+		// Empty HEX code box
 		errorMsg.textContent = "Oh no! HEX code box is empty!";
 		errorMsg.classList.remove("hide");
 	} else {
@@ -81,6 +83,9 @@ generateBtn.addEventListener("click", function () {
 
 // Generate the code for the textarea
 function generateCode(text, colour) {
+	if (colour.charAt(0) !== "#") {
+		colour = "#" + colour;
+	}
 	var finalCode = '<span style="color: ' + colour + ';">' + text + "</span>";
 	return finalCode;
 }
