@@ -9,6 +9,7 @@ var colourPickerInput = document.querySelector("#colour-picker");
 var hexCodeInput = document.querySelector("#hex-code");
 var userInput = document.querySelector("#user-input");
 var textarea = document.querySelector("#final-code-textarea");
+var copyBtn = document.querySelector("#copy-btn");
 
 // Add the disabled styling to the first button + disabling the button entirely
 // generateBtn.setAttribute("class", "disabled-btn");
@@ -34,8 +35,14 @@ colourChoice.addEventListener("click", function () {
 	}
 	colourSection.classList.remove("hide");
 });
-
-var colorValue = colourPickerInput.value;
+// Handling the copy button
+copyBtn.addEventListener("click", function () {
+	// Selects the text inside the textarea and copies the text to the clipboard
+	textarea.select();
+	textarea.setSelectionRange(0, 99999); // For mobile devices
+	navigator.clipboard.writeText(textarea.value);
+	textarea.selectionStart = textarea.selectionEnd;
+});
 
 // When the user clicks the button
 generateBtn.addEventListener("click", function () {
