@@ -60,7 +60,6 @@ main,
 	font-family: "Mulish", sans-serif;
 	padding: 9px 15px;
 	color: #4c4b4b;
-	text-align: justify;
 	box-shadow: -4px 4px var(--dark-blue);
 }
 #user-input {
@@ -162,18 +161,6 @@ button {
 }
 #generate-btn {
 	margin-top: 10px;
-}
-
-.disabled-btn {
-	background-color: var(--disabled-blue);
-	border: 2px solid var(--disabled-blue);
-}
-.disabled-btn:hover {
-	box-shadow: none;
-	color: var(--grey);
-	background-color: var(--disabled-blue);
-	border: 2px solid var(--disabled-blue);
-	cursor: not-allowed;
 }
 
 #generate-btn:hover {

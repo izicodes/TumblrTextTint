@@ -12,9 +12,7 @@ var textarea = document.querySelector("#final-code-textarea");
 var copyBtn = document.querySelector("#copy-btn");
 var copyMsg = document.querySelector("#copy-message");
 
-// Add the disabled styling to the first button + disabling the button entirely
-// generateBtn.setAttribute("class", "disabled-btn");
-// generateBtn.disabled = true;
+// ---------------------------------------------------------------- //
 
 // If HEX Code choice is selected
 hexChoice.addEventListener("click", function () {
@@ -38,13 +36,18 @@ colourChoice.addEventListener("click", function () {
 });
 // Handling the copy button
 copyBtn.addEventListener("click", function () {
+	// If the textarea is NOT empty, the button works
 	if (textarea.value !== "") {
 		// Selects the text inside the textarea and copies the text to the clipboard
 		textarea.select();
 		textarea.setSelectionRange(0, 99999); // For mobile devices
 		navigator.clipboard.writeText(textarea.value);
+
+		// Deselects the textarea's text
 		textarea.selectionStart = textarea.selectionEnd;
-		showMessage("Code copied!", copyMsg); // display "Hello, world!" for 3 seconds
+
+		// Make the copy message pop up
+		showMessage("Code copied!", copyMsg);
 	} else {
 		return;
 	}
