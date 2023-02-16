@@ -195,3 +195,14 @@ button {
 	box-shadow: -4px 4px var(--dark-blue);
 	border: 2px solid white;
 }
+
+/* COPY MESSAGE */
+.copyStyle {
+	color: #2fae53;
+	font-weight: bold;
+	padding: 6px 8px;
+	border-radius: 7px;
+	background-color: #e2f3e7;
+	margin: 0;
+	border: 1px solid #2fae53;
+}

@@ -10,6 +10,7 @@ var hexCodeInput = document.querySelector("#hex-code");
 var userInput = document.querySelector("#user-input");
 var textarea = document.querySelector("#final-code-textarea");
 var copyBtn = document.querySelector("#copy-btn");
+var copyMsg = document.querySelector("#copy-message");
 
 // Add the disabled styling to the first button + disabling the button entirely
 // generateBtn.setAttribute("class", "disabled-btn");
@@ -37,11 +38,16 @@ colourChoice.addEventListener("click", function () {
 });
 // Handling the copy button
 copyBtn.addEventListener("click", function () {
-	// Selects the text inside the textarea and copies the text to the clipboard
-	textarea.select();
-	textarea.setSelectionRange(0, 99999); // For mobile devices
-	navigator.clipboard.writeText(textarea.value);
-	textarea.selectionStart = textarea.selectionEnd;
+	if (textarea.value !== "") {
+		// Selects the text inside the textarea and copies the text to the clipboard
+		textarea.select();
+		textarea.setSelectionRange(0, 99999); // For mobile devices
+		navigator.clipboard.writeText(textarea.value);
+		textarea.selectionStart = textarea.selectionEnd;
+		showMessage("Code copied!", copyMsg); // display "Hello, world!" for 3 seconds
+	} else {
+		return;
+	}
 });
 
 // When the user clicks the button
@@ -113,4 +119,16 @@ function checkHEXCode(text, colour) {
 		textarea.value = "";
 		return;
 	}
+}
+function showMessage(text, input) {
+	if (input == copyMsg) {
+		copyMsg.classList.add("copyStyle");
+	}
+	input.textContent = text;
+	setTimeout(() => {
+		input.textContent = "";
+		if (input == copyMsg) {
+			copyMsg.classList.remove("copyStyle");
+		}
+	}, 1700);
 }
