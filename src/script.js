@@ -11,6 +11,7 @@ var userInput = document.querySelector("#user-input");
 var textarea = document.querySelector("#final-code-textarea");
 var copyBtn = document.querySelector("#copy-btn");
 var copyMsg = document.querySelector("#copy-message");
+var resetBtn = document.querySelector("#reset-btn");
 
 // ---------------------------------------------------------------- //
 
@@ -77,6 +78,15 @@ generateBtn.addEventListener("click", function () {
 			checkHEXCode(text, hexValue);
 		}
 	}
+});
+
+// Handles the reset button
+resetBtn.addEventListener("click", function () {
+	userInput.value = "";
+	textarea.value = "";
+	hexCodeInput.value = "";
+	colourSection.classList.add("hide");
+	hexSection.classList.add("hide");
 });
 
 // FUNCTIONS
