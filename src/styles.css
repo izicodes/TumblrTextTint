@@ -194,3 +194,67 @@ button {
 	margin: 0;
 	border: 1px solid #2fae53;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 500px) {
+	body {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	#final-code-textarea,
+	#user-input {
+		width: 100%;
+	}
+
+	#logo {
+		width: 100%;
+	}
+
+	button {
+		font-size: 1.15rem;
+	}
+
+	label {
+		font-size: 1.1rem;
+	}
+
+	.button-group > button:nth-child(1) {
+		background-color: #db5c84;
+		color: var(--dark-blue);
+	}
+	.button-group > button:nth-child(1):hover,
+	.button-group > button:nth-child(1):focus {
+		background-color: #ba3e66;
+		border: 3px solid white;
+	}
+	.button-group > button:nth-child(2) {
+		background-color: #f9c37a;
+		color: var(--dark-blue);
+	}
+	.button-group > button:nth-child(2):hover,
+	.button-group > button:nth-child(2):focus {
+		background-color: #c9944f;
+		border: 3px solid white;
+	}
+	#generate-btn {
+		background-color: #5ac077;
+		color: var(--dark-blue);
+	}
+	#generate-btn:hover,
+	#generate-btn:focus {
+		background-color: #3a8951;
+		border: 3px solid white;
+	}
+
+	#generate-btn,
+	.button-group > button:nth-child(1),
+	.button-group > button:nth-child(2) {
+		box-shadow: -4px 4px var(--dark-blue);
+		border: 3px solid white;
+	}
+}
+@media only screen and (max-width: 1100px) {
+}
+@media only screen and (min-width: 1100px) and (max-width: 1300px) {
+}
