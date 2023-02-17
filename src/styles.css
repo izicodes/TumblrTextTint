@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 * {
 	box-sizing: border-box;
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur686.cur), auto !important;
 }
 
 :root {
@@ -69,6 +70,10 @@ main,
 	width: 250px;
 	text-align: center;
 }
+#user-input,
+#hex-code {
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur677.cur), auto !important;
+}
 
 #user-input::placeholder,
 #final-code-textarea::placeholder,
@@ -135,7 +140,7 @@ input[type="radio"]:checked::before {
 	width: 60px;
 	height: 60px;
 	border: none;
-	cursor: pointer;
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
 }
 
 #colour-picker::-webkit-color-swatch {
@@ -164,6 +169,7 @@ input[type="radio"]:checked::before {
 }
 #final-code-textarea {
 	resize: none;
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur686.cur), auto !important;
 }
 .button-group {
 	text-align: center;
@@ -193,14 +199,17 @@ button {
 #generate-btn:hover {
 	background-color: #5ac077;
 	color: var(--dark-blue);
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
 }
 .button-group > button:nth-child(1):hover {
 	background-color: #db5c84;
 	color: var(--dark-blue);
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
 }
 .button-group > button:nth-child(2):hover {
 	background-color: #f9c37a;
 	color: var(--dark-blue);
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
 }
 
 #generate-btn:hover,
