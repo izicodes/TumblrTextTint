@@ -11,6 +11,8 @@
   <img src="https://img.shields.io/badge/technologies-HTML%2C%20CSS%2C%20JavaScript-%23e1a9eb?style=flat-square" alt="Logo">
     <img src="https://img.shields.io/badge/platform-Tumblr-%2336465d?style=flat-square" alt="Logo">
     <a href="https://xiacodes.tumblr.com/" target="_blank"><img src="https://img.shields.io/badge/contact%20me-my%20blog-%23baaaa0?style=flat-square" alt="Logo"></a>
+    <a href="https://xiacodes.tumblr.com/" target="_blank"><img src="https://img.shields.io/github/v/release/xiacodes/TumblrTextTint?color=f08fb9&style=flat-square" alt="Logo"></a>
+    
 </p>
 
 -------------
