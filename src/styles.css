@@ -17,6 +17,9 @@ body {
 	margin: 0;
 	font-size: 16px;
 	font-family: "Mulish", sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /* WRAPPERS */
@@ -139,7 +142,6 @@ input[type="radio"]:checked::before {
 	border: none;
 	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
 }
-
 #colour-picker::-webkit-color-swatch {
 	border-radius: 13px;
 	border: 3px solid white;
@@ -208,7 +210,6 @@ button {
 	color: var(--dark-blue);
 	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
 }
-
 #generate-btn:hover,
 .button-group > button:nth-child(1):hover,
 .button-group > button:nth-child(2):hover {
@@ -231,19 +232,19 @@ button {
 /* FOOTER */
 footer {
 	width: 100%;
-	margin-top: 60px;
+	margin-top: auto;
 	text-align: center;
-	padding: 5px 0;
-	background-color: #485c42;
-	color: #b1b7b0;
+	padding: 7px 0;
+	background-color: var(--dark-blue);
+	color: var(--grey);
+	font-size: 0.8rem;
 }
 footer > a {
-	color: #bcc2ac;
+	color: #a5b3c8;
 	transition: 400ms;
 }
-
 .fa-code {
-	color: #103305;
+	color: #a5b3c8;
 	padding-right: 5px;
 }
 
@@ -257,6 +258,10 @@ footer > a {
 	#final-code-textarea,
 	#user-input {
 		width: 100% !important;
+	}
+
+	footer {
+		margin-top: 60px;
 	}
 
 	#logo {
