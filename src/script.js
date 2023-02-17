@@ -89,6 +89,8 @@ resetBtn.addEventListener("click", function () {
 	hexCodeInput.value = "";
 	colourSection.classList.add("hide");
 	hexSection.classList.add("hide");
+	colourChoice.checked = false;
+	hexChoice.checked = false;
 });
 
 // ---------------------------------------------------------------- //
