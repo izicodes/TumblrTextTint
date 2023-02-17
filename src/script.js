@@ -25,6 +25,7 @@ hexChoice.addEventListener("click", function () {
 	}
 	hexSection.classList.remove("hide");
 });
+
 // If colour picker choice is selected
 colourChoice.addEventListener("click", function () {
 	if (!hexSection.classList.contains("hide")) {
@@ -35,6 +36,7 @@ colourChoice.addEventListener("click", function () {
 	}
 	colourSection.classList.remove("hide");
 });
+
 // Handling the copy button
 copyBtn.addEventListener("click", function () {
 	// If the textarea is NOT empty, the button works
@@ -88,6 +90,8 @@ resetBtn.addEventListener("click", function () {
 	colourSection.classList.add("hide");
 	hexSection.classList.add("hide");
 });
+
+// ---------------------------------------------------------------- //
 
 // FUNCTIONS
 // Generate the code for the textarea
