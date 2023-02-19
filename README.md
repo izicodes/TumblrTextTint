@@ -19,8 +19,8 @@
 
 ### Application Overview
 
-<p align="justify">TumblrTextTint is a web application that allows you to format your Tumblr blog posts with a custom color for your text. The application is designed to enhance the aesthetic appeal of your posts, and provide you with more creative freedom by allowing you to choose from a wide range of color options beyond those provided by Tumblr's default formatting options.</p>
-<p align="justify">With TumblrTextTint, you can easily generate HTML code for a span tag with a style attribute that sets the color of your text. The application is a free and open-source application that is simple, user-friendly, and requires no installation or setup. It is designed to be accessible to users of all skill levels, and is an excellent tool for bloggers, writers, and anyone looking to add a personal touch to their Tumblr posts.</p>
+<p align="justify">TumblrTextTint is a web application that enables you to format your Tumblr blog posts with a custom colour for your text. The application is designed to enhance the aesthetic appeal of your posts and provide you with more creative freedom by allowing you to choose from a wide range of colour options beyond those provided by Tumblr's default formatting options.</p>
+<p align="justify">With TumblrTextTint, you can easily generate HTML code for a span tag with a style attribute that sets the colour of your text. The application is a free and open-source tool that is simple, user-friendly and requires no installation or setup. It is designed to be accessible to users of all skill levels and is an excellent tool for bloggers, writers and anyone looking to add a personal touch to their Tumblr posts.</p>
 
 ### The link
 > **[Click here to try TumblrTextTint! 🔗](https://xiacodes.github.io/TumblrTextTint/)**
@@ -41,11 +41,13 @@
 
 ### Credits
 
-This web application was created by Loariya-Fiaba ([@xiacodes](https://xiacodes.tumblr.com/)) using HTML, CSS, and JavaScript. The custom cursors used are called "Oxygen Chrome Set" created by Riccardo Laconelli - [link to the cursor set](https://www.cursors-4u.com/cursor/2010/12/17/oxygen-chrome-set.html).
+This web application was created by Loariya-Fiaba ([@xiacodes](https://xiacodes.tumblr.com/)) using HTML, CSS, and JavaScript. 
+The custom cursors used are called "Oxygen Chrome Set" created by Riccardo Laconelli - [link to the cursor set](https://www.cursors-4u.com/cursor/2010/12/17/oxygen-chrome-set.html).
+The web app was also inspired by a [JS Fiddle](http://jsfiddle.net/j7vLfbw1/22/) - credits to the creator!
 
 ### License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ### Found an issue?
 
