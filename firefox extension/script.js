@@ -1,11 +1,7 @@
 // Variables
-var hexChoice = document.querySelector("#hex-code-choice");
 var hexSection = document.querySelector("#hex-code-section");
-var colourChoice = document.querySelector("#colour-picker-choice");
-var colourSection = document.querySelector("#colour-picker-section");
 var generateBtn = document.querySelector("#generate-btn");
 var errorMsg = document.querySelector("#error-message");
-var colourPickerInput = document.querySelector("#colour-picker");
 var hexCodeInput = document.querySelector("#hex-code");
 var userInput = document.querySelector("#user-input");
 var textarea = document.querySelector("#final-code-textarea");
@@ -14,28 +10,6 @@ var copyMsg = document.querySelector("#copy-message");
 var resetBtn = document.querySelector("#reset-btn");
 
 // ---------------------------------------------------------------- //
-
-// If HEX Code choice is selected
-hexChoice.addEventListener("click", function () {
-	if (!colourSection.classList.contains("hide")) {
-		colourSection.classList.add("hide");
-		if (textarea.value !== null) {
-			textarea.value = "";
-		}
-	}
-	hexSection.classList.remove("hide");
-});
-
-// If colour picker choice is selected
-colourChoice.addEventListener("click", function () {
-	if (!hexSection.classList.contains("hide")) {
-		hexSection.classList.add("hide");
-		if (textarea.value !== null) {
-			textarea.value = "";
-		}
-	}
-	colourSection.classList.remove("hide");
-});
 
 // Handling the copy button
 copyBtn.addEventListener("click", function () {
@@ -59,26 +33,17 @@ copyBtn.addEventListener("click", function () {
 // When the user clicks the button
 generateBtn.addEventListener("click", function () {
 	var text = userInput.value;
-	var colorValue = colourPickerInput.value;
 	var hexValue = hexCodeInput.value;
 
 	if (userInput.value == "") {
 		createErrorMessage("Oh no! Empty first box!");
-	} else if (colourSection.classList.contains("hide") && hexSection.classList.contains("hide")) {
-		// User didn't pick any colour choices
-		createErrorMessage("Oh no! You didn't choose a colour!");
-	} else if (hexCodeInput.value == "" && colourSection.classList.contains("hide")) {
+    } else if (hexCodeInput.value == "") {
 		// Empty HEX code box
 		createErrorMessage("Oh no! HEX code box is empty!");
 	} else {
 		errorMsg.classList.add("hide");
-		// Getting value from colour picker
-		if (!colourSection.classList.contains("hide") && userInput.value !== null && hexSection.classList.contains("hide")) {
-			textarea.value = generateCode(text, colorValue);
-		}
-		if (!hexSection.classList.contains("hide") && userInput.value !== null && colourSection.classList.contains("hide")) {
-			checkHEXCode(text, hexValue);
-		}
+        // Getting the colour from the HEX code text box
+        checkHEXCode(text, hexValue);
 	}
 });
 
@@ -87,10 +52,6 @@ resetBtn.addEventListener("click", function () {
 	userInput.value = "";
 	textarea.value = "";
 	hexCodeInput.value = "";
-	colourSection.classList.add("hide");
-	hexSection.classList.add("hide");
-	colourChoice.checked = false;
-	hexChoice.checked = false;
 });
 
 // ---------------------------------------------------------------- //
