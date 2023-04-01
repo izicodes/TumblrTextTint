@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="content">
+				<header>
+					<img src="logo2.png" alt="application logo" id="logo" />
+				</header>
+				<main>
+					<!-- The user input -->
+					<input type="text" name="user-input" id="user-input" placeholder="Enter your text here..." autocomplete="off" />
+
+					<!-- The radio button choices -->
+					<section id="radio-buttons">
+						<div class="align-center"><input type="radio" name="choice" id="colour-picker-choice" /><label for="colour-picker-choice">Colour-picker</label></div>
+						<div class="align-center"><input type="radio" name="choice" id="hex-code-choice" /><label for="hex-code-choice">Hex code</label></div>
+					</section>
+
+					<!-- The actual choices to pop-up -->
+					<section class="hide" id="colour-picker-section">
+						<input type="color" value="#ff9933" name="colour-picker" id="colour-picker" />
+					</section>
+					<section class="hide" id="hex-code-section">
+						<input type="text" name="" id="hex-code" placeholder="Enter HEX code including the #" autocomplete="off" maxlength="7" />
+					</section>
+
+					<!-- The button -->
+					<div class="first-btn-section">
+						<button type="button" id="generate-btn" class="">Tint my text!</button>
+						<p id="error-message" class="hide"></p>
+					</div>
+
+					<!-- The textarea that the code will appear + buttons -->
+					<section class="bottom-section">
+						<textarea name="final-code-textarea" id="final-code-textarea" cols="40" rows="3" placeholder="Your code will be generated here..." readonly></textarea>
+						<div class="button-group">
+							<button id="copy-btn">Copy</button>
+							<button id="reset-btn">Reset</button>
+						</div>
+						<p id="copy-message"></p>
+					</section>
+				</main>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
