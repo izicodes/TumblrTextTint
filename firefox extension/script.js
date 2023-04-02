@@ -88,7 +88,7 @@ function checkHEXCode(text, colour) {
 				colour = "#" + colour;
 				textarea.value = generateCode(text, colour);
 				return;
-			} else {
+			} else if (colour.trim().length < 6) {
 				createErrorMessage("Format the HEX code correctly please!");
 				textarea.value = "";
 				return;
