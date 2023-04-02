@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  height: 310px;
+  height: 305px;
 }
 
 /* WRAPPERS */
@@ -173,4 +173,14 @@ button {
 }
 .lowopacity {
   opacity: 0;
+}
+
+/* THE GITHUB SVG  */
+#GitHubSVG {
+  fill: var(--grey);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
 }
