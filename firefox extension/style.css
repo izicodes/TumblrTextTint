@@ -20,11 +20,12 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
+  height: 310px;
 }
 
 /* WRAPPERS */
 .wrapper {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .content {
