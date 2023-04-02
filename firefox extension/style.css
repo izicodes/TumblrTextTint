@@ -183,4 +183,9 @@ button {
   position: absolute;
   bottom: 12px;
   right: 12px;
+  transition: 400ms;
+}
+#GitHubSVG:hover {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
+  fill: #f9c37a;
 }
