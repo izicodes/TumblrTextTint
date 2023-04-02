@@ -3,3 +3,163 @@
 	box-sizing: border-box;
 	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur686.cur), auto !important;
 }
+
+:root {
+	--blue: #36465d;
+	--dark-blue: #283344;
+	--disabled-blue: #7f8a9b;
+	--grey: #dddedc;
+}
+
+body {
+	background-color: var(--blue);
+	color: var(--grey);
+	margin: 0;
+	font-size: 16px;
+	font-family: "Mulish", sans-serif;
+	display: flex;
+	flex-direction: column;
+    padding: 0 20px;
+}
+
+/* WRAPPERS */
+.wrapper {
+	margin-top: 10px;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+}
+
+/* HEADER */
+#logo {
+	width: 230px;
+	margin-bottom: 25px;
+}
+
+/* MAIN */
+main,
+.bottom-section,
+.first-btn-section {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	gap: 25px;
+}
+
+.align-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.first-btn-section {
+	gap: 10px !important;
+}
+#error-message {
+	margin: 0;
+	color: #ffc8c8;
+	font-size: 0.85rem;
+}
+
+/* USER INPUT */
+#user-input,
+#final-code-textarea,
+#hex-code {
+	border-radius: 10px;
+	border: none;
+	font-size: 1rem;
+	outline: none;
+	font-family: "Mulish", sans-serif;
+	padding: 7px 13px;
+	color: #4c4b4b;
+	box-shadow: -4px 4px var(--dark-blue);
+}
+#user-input {
+	width: 250px;
+}
+#hex-code {
+	width: 150px;
+	text-align: center;
+}
+#user-input,
+#hex-code {
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur677.cur), auto !important;
+}
+
+#user-input::placeholder,
+#final-code-textarea::placeholder,
+#hex-code::placeholder {
+	font-size: 0.85rem;
+	color: #b7b7b7;
+}
+
+/* GENERATED CODE SECTION */
+.bottom-section {
+	margin-top: 20px;
+}
+#final-code-textarea {
+    width: 250px;
+	resize: none;
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur686.cur), auto !important;
+}
+.button-group {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	gap: 25px;
+}
+
+/* BUTTONS */
+button {
+	border: none;
+	background-color: var(--dark-blue);
+	border: 2px solid var(--dark-blue);
+	color: var(--grey);
+	padding: 10px 10px;
+	border-radius: 10px;
+	transition: 300ms;
+	font-family: "Mulish", sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	letter-spacing: 1.5px;
+	font-size: 0.80rem;
+}
+#generate-btn {
+	margin-top: 10px;
+}
+
+#generate-btn:hover {
+	background-color: #5ac077;
+	color: var(--dark-blue);
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
+}
+.button-group > button:nth-child(1):hover {
+	background-color: #db5c84;
+	color: var(--dark-blue);
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
+}
+.button-group > button:nth-child(2):hover {
+	background-color: #f9c37a;
+	color: var(--dark-blue);
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
+}
+#generate-btn:hover,
+.button-group > button:nth-child(1):hover,
+.button-group > button:nth-child(2):hover {
+	box-shadow: -4px 4px var(--dark-blue);
+	border: 2px solid white;
+}
+
+/* COPY MESSAGE */
+.copyStyle {
+	color: #2fae53;
+	font-weight: bold;
+	padding: 6px 8px;
+	font-size: 12px;
+	border-radius: 7px;
+	background-color: #e2f3e7;
+	margin: 0;
+	border: 1px solid #2fae53;
+}
