@@ -58,6 +58,25 @@ main,
   place-items: center;
   gap: 25px;
 }
+.installed_text {
+  font-size: 20px;
+}
+#instructions_link {
+  background-color: #ba3e66;
+  color: var(--grey);
+  text-decoration: none;
+  margin-right: 2px;
+  padding: 1px 5px;
+  border-radius: 5px;
+  transition: 300ms;
+}
+#instructions_link:hover {
+  background-color: #c97c4f;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
+}
+.center-text {
+  text-align: center;
+}
 
 /* USER INPUT */
 #user-input,
