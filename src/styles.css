@@ -43,6 +43,9 @@ body {
   width: 650px;
   margin-bottom: 45px;
 }
+.hover {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur683.cur), auto !important;
+}
 
 /* HIDING ELEMENTS */
 .hide {
