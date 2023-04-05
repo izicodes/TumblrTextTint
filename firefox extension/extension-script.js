@@ -124,3 +124,25 @@ function showMessage(text, input) {
     }
   }, 1700);
 }
+
+// ---------------------------------------------------------------- //
+// >> When installed, direct user to the onboarding page
+
+// browser.runtime.onInstalled.addListener(async ({ reason }) => {
+//   switch (reason) {
+//     case "install":
+//       {
+//         const url = browser.runtime.getURL("installed/installed.html");
+//         await browser.tabs.create({ url });
+//       }
+//       break;
+//     // see below
+//   }
+// });
+
+browser.runtime.onInstalled.addListener(onInstalled);
+function onInstalled(details) {
+  if (details.reason === "install" || details.reason === "temporary") {
+    console.log(browser.extension.getURL("installed/installed.html"));
+  }
+}

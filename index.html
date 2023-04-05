@@ -1,67 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="TumblrTextTint is a free and user-friendly web application that enables you to customize the colour of your text on Tumblr. With a wide range of colour options, you can enhance the aesthetic appeal of your blog posts and add a personal touch to your content. This open-source tool generates HTML code for a span tag with a style attribute that sets the colour of your text. Whether you're a blogger, writer or simply looking to enhance your Tumblr posts, TumblrTextTint is the perfect tool for you."
-		/>
-		<meta name="author" content="Isabelle 'Loariya-Fiaba' Zennah"">
-		<meta name="keywords" content="TumblrTextTint, Tumblr, text formatting, custom colours, web application, code generator" />
-		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-		<meta name="robots" content="index,follow" />
-		<link rel="stylesheet" href="src/styles.css" />
-		<title>TumblrTextTint</title>
-	</head>
-	<body>
-		<div class="wrapper">
-			<div class="content">
-				<header>
-					<img src="images/logo2.png" alt="application logo" id="logo" />
-				</header>
-				<main>
-					<!-- The user input -->
-					<input type="text" name="user-input" id="user-input" placeholder="Enter your text here..." autocomplete="off" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TumblrTextTint is a free and user-friendly web application that enables you to customize the colour of your text on Tumblr. With a wide range of colour options, you can enhance the aesthetic appeal of your blog posts and add a personal touch to your content. This open-source tool generates HTML code for a span tag with a style attribute that sets the colour of your text. Whether you're a blogger, writer or simply looking to enhance your Tumblr posts, TumblrTextTint is the perfect tool for you."
+    />
+    <meta name="author" content="Isabelle 'Loariya-Fiaba' Zennah" />
+    <meta
+      name="keywords"
+      content="TumblrTextTint, Tumblr, text formatting, custom colours, web application, code generator"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>TumblrTextTint</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <header>
+          <a
+            href="https://xiacodes.github.io/TumblrTextTint/"
+            title="The Official Web App"
+            ><img
+              src="images/logo2.png"
+              alt="application logo"
+              id="logo"
+              class="hover"
+          /></a>
+        </header>
+        <main>
+          <!-- The user input -->
+          <input
+            type="text"
+            name="user-input"
+            id="user-input"
+            placeholder="Enter your text here..."
+            autocomplete="off"
+          />
 
-					<!-- The radio button choices -->
-					<section id="radio-buttons">
-						<div class="align-center"><input type="radio" name="choice" id="colour-picker-choice" /><label for="colour-picker-choice">Colour-picker</label></div>
-						<div class="align-center"><input type="radio" name="choice" id="hex-code-choice" /><label for="hex-code-choice">Hex code</label></div>
-					</section>
+          <!-- The radio button choices -->
+          <section id="radio-buttons">
+            <div class="align-center">
+              <input
+                type="radio"
+                name="choice"
+                id="colour-picker-choice"
+              /><label for="colour-picker-choice">Colour-picker</label>
+            </div>
+            <div class="align-center">
+              <input type="radio" name="choice" id="hex-code-choice" /><label
+                for="hex-code-choice"
+                >Hex code</label
+              >
+            </div>
+          </section>
 
-					<!-- The actual choices to pop-up -->
-					<section class="hide" id="colour-picker-section">
-						<input type="color" value="#ff9933" name="colour-picker" id="colour-picker" />
-					</section>
-					<section class="hide" id="hex-code-section">
-						<input type="text" name="" id="hex-code" placeholder="Enter HEX code including the #" autocomplete="off" maxlength="7" />
-					</section>
+          <!-- The actual choices to pop-up -->
+          <section class="hide" id="colour-picker-section">
+            <input
+              type="color"
+              value="#ff9933"
+              name="colour-picker"
+              id="colour-picker"
+            />
+          </section>
+          <section class="hide" id="hex-code-section">
+            <input
+              type="text"
+              name=""
+              id="hex-code"
+              placeholder="Enter HEX code including the #"
+              autocomplete="off"
+              maxlength="7"
+            />
+          </section>
 
-					<!-- The button -->
-					<div class="first-btn-section">
-						<button type="button" id="generate-btn" class="">Tint my text!</button>
-						<p id="error-message" class="hide"></p>
-					</div>
+          <!-- The button -->
+          <div class="first-btn-section">
+            <button type="button" id="generate-btn" class="">
+              Tint my text!
+            </button>
+            <p id="error-message" class="hide"></p>
+          </div>
 
-					<!-- The textarea that the code will appear + buttons -->
-					<section class="bottom-section">
-						<textarea name="final-code-textarea" id="final-code-textarea" cols="40" rows="3" placeholder="Your code will be generated here..." readonly></textarea>
-						<div class="button-group">
-							<button id="copy-btn">Copy</button>
-							<button id="reset-btn">Reset</button>
-						</div>
-						<p id="copy-message"></p>
-					</section>
-				</main>
-			</div>
-		</div>
-		<footer>
-			<i class="fa-solid fa-code"></i> © 2023 TumblrTextTint. All rights reserved. Coded by Loariya-Fiaba - <a href="https://github.com/xiacodes" target="_blank" rel="noopener noreferrer">GitHub</a> |
-			<a href="https://xiacodes.tumblr.com/" target="_blank" rel="noopener noreferrer">Tumblr</a>
-		</footer>
-		<script src="src/script.js"></script>
-	</body>
+          <!-- The textarea that the code will appear + buttons -->
+          <section class="bottom-section">
+            <textarea
+              name="final-code-textarea"
+              id="final-code-textarea"
+              cols="40"
+              rows="3"
+              placeholder="Your code will be generated here..."
+              readonly
+            ></textarea>
+            <div class="button-group">
+              <button id="copy-btn">Copy</button>
+              <button id="reset-btn">Reset</button>
+            </div>
+            <p id="copy-message"></p>
+          </section>
+        </main>
+      </div>
+    </div>
+    <footer>
+      <i class="fa-solid fa-code"></i> © 2023 TumblrTextTint. All rights
+      reserved. Coded by Loariya-Fiaba -
+      <a
+        href="https://github.com/xiacodes"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+      |
+      <a
+        href="https://xiacodes.tumblr.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Tumblr</a
+      >
+    </footer>
+    <script src="src/script.js"></script>
+  </body>
 </html>
