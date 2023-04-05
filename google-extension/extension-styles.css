@@ -21,6 +21,7 @@ body {
 	flex-direction: column;
 	padding: 0 20px;
 	height: 323px;
+	border-radius: 20px;
 }
 
 /* WRAPPERS */
