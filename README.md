@@ -41,7 +41,7 @@
 
 ### Credits
 
-This web application was created by Loariya-Fiaba ([@xiacodes](https://xiacodes.tumblr.com/)) using HTML, CSS, and JavaScript. 
+This web application was created by myself Izzy-Loa ([@xiacodes](https://xiacodes.tumblr.com/)) using HTML, CSS, and JavaScript. 
 The custom cursors used are called "Oxygen Chrome Set" created by Riccardo Laconelli - [link to the cursor set](https://www.cursors-4u.com/cursor/2010/12/17/oxygen-chrome-set.html).
 The web app was also inspired by a [JS Fiddle](http://jsfiddle.net/j7vLfbw1/22/) - credits to the creator!
 
